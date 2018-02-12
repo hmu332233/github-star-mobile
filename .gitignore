@@ -1,0 +1,6 @@
+dev/yarn.lock
+dev/node_modules
+dev/build
+
+# goorm
+goorm.manifest
