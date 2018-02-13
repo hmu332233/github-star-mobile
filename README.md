@@ -16,3 +16,7 @@ devServer: {
 },
 ```
 
+### 추가 설치
+```bash
+$ npm install --save redux react-redux
+```

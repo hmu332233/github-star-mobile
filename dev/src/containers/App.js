@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Hello from 'components/Hello';
+import ButtonGroup from 'components/ButtonGroup';
 
 class App extends Component {
     state = {
@@ -16,7 +17,12 @@ class App extends Component {
     }
     
     render() {
-        return <Hello name={`React with Webpack2 (${this.state.number})`}/>
+        return (
+          <div>
+          	<Hello name={`React with Webpack2 (${this.state.number})`}/>
+          	<ButtonGroup/>
+          </div>
+        );
     }
 }
 
