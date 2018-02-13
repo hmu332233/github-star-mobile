@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Hello from 'components/Hello';
 import ButtonGroup from 'components/ButtonGroup';
+import Header from 'components/Header';
 
 class App extends Component {
     state = {
@@ -19,6 +20,7 @@ class App extends Component {
     render() {
         return (
           <div>
+          	<Header/>
           	<Hello name={`React with Webpack2 (${this.state.number})`}/>
           	<ButtonGroup/>
           </div>
