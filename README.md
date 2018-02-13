@@ -17,6 +17,13 @@ devServer: {
 ```
 
 ### 추가 설치
+- reactstrap
+```bash
+$ npm install bootstrap@4.0.0-beta.2 --save
+$ npm install --save reactstrap@next
+```
+참고 - [reactstrap](https://reactstrap.github.io/)
+- redux
 ```bash
 $ npm install --save redux react-redux
 ```
