@@ -1,0 +1,23 @@
+.github-card {
+  margin-top: 20px;
+  padding: 10px;
+  background: #fff;
+}
+
+.github-card__body {
+  display: flex;
+}
+
+.github-card__body-contents p {
+  font-size: 14px;
+  color: #6d6d6d;
+}
+
+.github-card__body-img img {
+  background: #efefef;
+}
+
+.github-card__footer {
+  font-size: 13px;
+  color: #6d6d6d;
+}
