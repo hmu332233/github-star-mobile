@@ -1,12 +1,12 @@
-import { SEARCH } from '../actions';
+import * as types from '../actions';
 import { combineReducers } from 'redux';
 
 const cardsInitialState = {
-    cards: [
+    data: [
       {
-        title: 'reactstrap',
+        name: 'reactstrap',
         description: 'Simple React Bootstrap 4 component',
-        link: '#',
+        html_url: '#',
         updated_at: '2018-02-14T16:48:18Z'
       }
     ]
@@ -14,7 +14,11 @@ const cardsInitialState = {
 
 const cards = (state = cardsInitialState, action) => {
   switch(action.type) {
-    case SEARCH:
+    case types.LOAD_STARRED_SUCCESS:
+      return Object.assign({}, state, {
+        data: action.starredData
+      });
+    case types.SEARCH:
       // TODO:: state를 걸러내기
       return state;
     default:

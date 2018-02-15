@@ -11,7 +11,7 @@ class GithubCard extends Component {
         <div className="github-card__body">
           <div className="github-card__body-contents">
             <h5 className="contents-title">
-              <a href={this.props.starredItem.link}>{this.props.starredItem.title}</a>
+              <a href={this.props.starredItem.html_url}>{this.props.starredItem.name}</a>
             </h5>
             <p>{this.props.starredItem.description}</p>
           </div>
