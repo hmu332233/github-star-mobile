@@ -1,8 +1,11 @@
 import React, {Component} from 'react';
+import { connect } from 'react-redux';
 import Hello from 'components/Hello';
 import ButtonGroup from 'components/ButtonGroup';
 import Header from 'components/Header';
 import GithubCard from 'components/GithubCard';
+
+import GithubApi from 'api/GithubApi';
 
 var fakeData = {
   title: 'reactstrap',
@@ -23,6 +26,10 @@ class App extends Component {
             setTimeout(increment, 1000);
         }
         increment();
+      
+      GithubApi.getAllStarred('hmu332233').then(function (res){
+        console.log(res);
+      });
     }
     
     render() {
@@ -37,5 +44,21 @@ class App extends Component {
       );
     }
 }
+
+
+let mapStateToProps = (state) => {
+    return {
+        value: state.cards
+    };
+}
+
+let mapDispatchToProps = (dispatch) => {
+    return {
+        onIncrement: () => dispatch(increment()),
+        onDecrement: () => dispatch(decrement())
+    }
+}
+
+App = connect(mapStateToProps, mapDispatchToProps)(App);
 
 export default App;
