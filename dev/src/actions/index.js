@@ -3,10 +3,11 @@ import GithubApi from 'api/GithubApi';
 export const SEARCH = 'SEARCH';
 export const LOAD_STARRED_SUCCESS = 'LOAD_STARRED_SUCCESS';
 
-export function search() {
-    return {
-        type: SEARCH
-    };
+export function search(filter) {
+  return {
+    type: SEARCH,
+  	filter: filter
+  };
 }
 
 export function loadStarredSuccess(starredData) {

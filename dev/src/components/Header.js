@@ -16,6 +16,10 @@ class Header extends Component {
     this.setState({
       searchText: e.target.value
     });
+
+    this.props.onSearch(function (data) {
+      return data.name.includes(e.target.value);
+    });
   }
   
   render() {

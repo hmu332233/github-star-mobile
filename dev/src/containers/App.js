@@ -4,6 +4,7 @@ import Hello from 'components/Hello';
 import ButtonGroup from 'components/ButtonGroup';
 import Header from 'components/Header';
 import GithubCard from 'components/GithubCard';
+import { search } from '../actions';
 
 class App extends Component {
     
@@ -15,7 +16,7 @@ class App extends Component {
       });
       return (
         <div>
-          <Header/>
+          <Header onSearch={this.props.onSearch}/>
           <div id="cards">
             {githubCards}
           </div>
@@ -33,7 +34,7 @@ let mapStateToProps = (state) => {
 
 let mapDispatchToProps = (dispatch) => {
   return {
-
+    onSearch: (filter) => dispatch(search(filter))
   }
 }
 
