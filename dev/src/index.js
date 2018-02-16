@@ -1,15 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { createStore } from 'redux';
+import { Provider  } from 'react-redux';
 import { AppContainer } from 'react-hot-loader';
 import App from './containers/App';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import configureStore from './store/configureStore';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+import { loadStarred } from './actions';
 
+const store = configureStore();
 const rootEl = document.getElementById('root');
+
+store.dispatch(loadStarred());
 
 const render = Component =>
   ReactDOM.render(
     <AppContainer>
-      <Component />
+      <Provider store = {store}>
+        <Component />
+      </Provider>
     </AppContainer>,
     rootEl
   );
