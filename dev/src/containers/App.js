@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
-import Hello from 'components/Hello';
-import ButtonGroup from 'components/ButtonGroup';
 import Header from 'components/Header';
 import GithubCard from 'components/GithubCard';
 import { search } from '../actions';

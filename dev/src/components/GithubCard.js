@@ -17,7 +17,7 @@ class GithubCard extends Component {
           </div>
         </div>
         <div className="github-card__footer">
-          updated at: {this.props.starredItem.updated_at}
+          updated at: {new Date(this.props.starredItem.updated_at).toString()}
         </div>
       </div>
     );

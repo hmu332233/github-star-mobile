@@ -26,7 +26,7 @@ class Header extends Component {
     return (
       <header className="d-flex justify-content-between" id="header">
         <div className="header__left">
-          <h3 className="header__brand mb-0">star</h3>
+          <h3 className="header__brand mb-0">search</h3>
         </div>
         <div className="header__right d-flex">
           <div className="input-group">
