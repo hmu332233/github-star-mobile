@@ -1,6 +1,7 @@
 ## github star 모바일 검색용 페이지 
 
 - 웨일브라우저의 사이드바에 넣어서 쓸 github star 페이지
+- react + redux 연습용
 
 ### 개발환경
 - 본 프로젝트는 [velopert/react-webpack2-skeleton](https://github.com/velopert/react-webpack2-skeleton)의 hmr branch 시작으로 만들어졌습니다.
@@ -16,3 +17,15 @@ devServer: {
 },
 ```
 
+### 추가 설치
+- reactstrap
+```bash
+$ npm install bootstrap@4.0.0-beta.2 --save
+$ npm install --save reactstrap@next
+```
+참고 - [reactstrap](https://reactstrap.github.io/)
+- redux
+```bash
+$ npm install --save redux react-redux
+$ npm install --save redux-thunk
+```

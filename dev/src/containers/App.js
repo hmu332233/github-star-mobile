@@ -1,23 +1,41 @@
 import React, {Component} from 'react';
-import Hello from 'components/Hello';
+import { connect } from 'react-redux';
+import Header from 'components/Header';
+import GithubCard from 'components/GithubCard';
+import { search } from '../actions';
 
 class App extends Component {
-    state = {
-        number: 0
-    }
-    componentDidMount() {
-        const increment = () => {
-            this.setState({
-                number: this.state.number + 1
-            });
-            setTimeout(increment, 1000);
-        }
-        increment();
-    }
     
     render() {
-        return <Hello name={`React with Webpack2 (${this.state.number})`}/>
+      var githubCards = this.props.cards.map(function (card) {
+        return (
+          <GithubCard starredItem={card} key={card.name}/>
+        );
+      });
+      return (
+        <div>
+          <Header onSearch={this.props.onSearch}/>
+          <div id="cards">
+            {githubCards}
+          </div>
+        </div>
+      );
     }
 }
+
+
+let mapStateToProps = (state) => {
+  return {
+    cards: state.cards.data
+  };
+}
+
+let mapDispatchToProps = (dispatch) => {
+  return {
+    onSearch: (filter) => dispatch(search(filter))
+  }
+}
+
+App = connect(mapStateToProps, mapDispatchToProps)(App);
 
 export default App;
