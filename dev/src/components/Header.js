@@ -10,6 +10,19 @@ class Header extends Component {
     };
     
     this.onChangeText = this.onChangeText.bind(this);
+    this.handleKeyDown = this.handleKeyDown.bind(this);
+  }
+  
+  handleKeyDown(e) {
+    if (e.keyCode === 13) {
+      this.setState({
+        searchText: ''
+      });
+    }
+    
+    this.props.onSearch(function (data) {
+      return data.name.toLowerCase().includes('');
+    });
   }
   
   onChangeText(e) {
@@ -33,6 +46,7 @@ class Header extends Component {
             <input type="text" className="form-control border-right-none" aria-label="Recipient's username" aria-describedby="basic-addon2" 
               value={this.state.searchText}
       	      onChange={this.onChangeText}
+      	      onKeyDown={this.handleKeyDown}
             />
             <div className="input-group-append">
               <span className="input-group-text bg-white" id="basic-addon2">
