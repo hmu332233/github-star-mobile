@@ -7,7 +7,7 @@ class Header extends Component {
     
     this.state = {
       searchText: ''
-    }
+    };
     
     this.onChangeText = this.onChangeText.bind(this);
   }
@@ -18,7 +18,7 @@ class Header extends Component {
     });
 
     this.props.onSearch(function (data) {
-      return data.name.includes(e.target.value);
+      return data.name.toLowerCase().includes(e.target.value.toLowerCase());
     });
   }
   
