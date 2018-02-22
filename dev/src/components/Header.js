@@ -18,11 +18,11 @@ class Header extends Component {
       this.setState({
         searchText: ''
       });
+      
+      this.props.onSearch(function (data) {
+        return data.name.toLowerCase().includes('');
+      });
     }
-    
-    this.props.onSearch(function (data) {
-      return data.name.toLowerCase().includes('');
-    });
   }
   
   onChangeText(e) {
