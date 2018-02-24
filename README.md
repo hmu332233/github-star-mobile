@@ -29,3 +29,15 @@ $ npm install --save reactstrap@next
 $ npm install --save redux react-redux
 $ npm install --save redux-thunk
 ```
+
+### 커멘드
+- 개발서버 실행
+```bash
+$ cd dev
+$ npm start
+```
+- 빌드
+```bash
+$ cd dev
+$ npm run build
+```
