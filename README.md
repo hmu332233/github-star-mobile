@@ -29,3 +29,21 @@ $ npm install --save reactstrap@next
 $ npm install --save redux react-redux
 $ npm install --save redux-thunk
 ```
+
+### 커멘드
+- 개발서버 실행
+```bash
+$ cd dev
+$ npm start
+```
+- 빌드
+```bash
+$ cd dev
+$ npm run build
+```
+
+### 배포
+- 아래의 명령어로 dev의 결과물을 빌드하고 github에서 사용가능하도록 밖으로 꺼낸다.
+```bash
+$ ./build.sh
+```
