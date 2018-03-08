@@ -3,6 +3,11 @@
 - 웨일브라우저의 사이드바에 넣어서 쓸 github star 페이지
 - react + redux 연습용
 
+### 사용방법
+- https://hmu332233.github.io/github-star-mobile/[USER_NAME]
+- `/[USER_NAME]`: 사용자 아이디
+
+
 ### 개발환경
 - 본 프로젝트는 [velopert/react-webpack2-skeleton](https://github.com/velopert/react-webpack2-skeleton)의 hmr branch 시작으로 만들어졌습니다.
 - 다음과 같이 devServer가 수정되었습니다.

@@ -142,6 +142,7 @@ module.exports = {
         port: 3000,
         hot: true,
         inline: false,
-        disableHostCheck: true
+        disableHostCheck: true,
+      	historyApiFallback: true
     },
 };
