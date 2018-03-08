@@ -5,7 +5,10 @@ import GithubCard from 'components/GithubCard';
 import { search, loadStarred } from '../actions';
 
 class App extends Component {
-
+    constructor(props) {
+      super(props);
+      this.props.loadStarred(this.props.userName);
+    }
     render() {
       var githubCards = this.props.cards.map(function (card) {
         return (
@@ -24,9 +27,9 @@ class App extends Component {
 }
 
 
-let mapStateToProps = (state) => {
+let mapStateToProps = (state, ownProps) => {
   return {
-    userName: state.username,
+    userName: ownProps.match.params.userName,
     cards: state.cards.data
   };
 }

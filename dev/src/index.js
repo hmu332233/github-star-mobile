@@ -12,14 +12,14 @@ import { loadStarred } from './actions';
 const store = configureStore();
 const rootEl = document.getElementById('root');
 
-store.dispatch(loadStarred('hmu332233'));
+// store.dispatch(loadStarred('hmu332233'));
 
 const render = Component =>
   ReactDOM.render(
     <AppContainer>
       <Provider store = {store}>
         <BrowserRouter>
-          <Route path="/:username?" component={Component} />
+          <Route path="/:userName?" component={Component} />
         </BrowserRouter>
       </Provider>
     </AppContainer>,
