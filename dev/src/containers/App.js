@@ -7,7 +7,7 @@ import { search, loadStarred } from '../actions';
 class App extends Component {
     constructor(props) {
       super(props);
-      this.props.loadStarred(this.props.userName);
+      this.props.loadStarred(this.props.userName || 'hmu332233');
     }
     render() {
       var githubCards = this.props.cards.map(function (card) {
