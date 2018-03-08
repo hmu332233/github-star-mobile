@@ -17,9 +17,9 @@ export function loadStarredSuccess(starredData) {
   }
 }
 
-export function loadStarred() {  
+export function loadStarred(userName) {  
   return function(dispatch) {
-    return GithubApi.getAllStarred('hmu332233').then(res => {
+    return GithubApi.getAllStarred(userName).then(res => {
       dispatch(loadStarredSuccess(res));
     }).catch(error => {
       throw(error);
