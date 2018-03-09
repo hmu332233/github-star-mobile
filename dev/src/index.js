@@ -14,12 +14,14 @@ const rootEl = document.getElementById('root');
 
 // store.dispatch(loadStarred('hmu332233'));
 
+var path = window.location.pathname.split('/')[1];
+
 const render = Component =>
   ReactDOM.render(
     <AppContainer>
       <Provider store = {store}>
         <BrowserRouter>
-          <Route path="/:userName?" component={Component} />
+          <Route path={`/${path}/:userName?`} component={Component} />
         </BrowserRouter>
       </Provider>
     </AppContainer>,
