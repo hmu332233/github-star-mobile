@@ -1,18 +1,23 @@
 import GithubApi from 'api/GithubApi';
 
-export const SEARCH = 'SEARCH';
-export const LOAD_STARRED_SUCCESS = 'LOAD_STARRED_SUCCESS';
+// export const SEARCH = 'SEARCH';
+// export const LOAD_STARRED_SUCCESS = 'LOAD_STARRED_SUCCESS';
+
+export const types = {
+  SEARCH: 'SEARCH',
+  LOAD_STARRED_SUCCESS: 'LOAD_STARRED_SUCCESS'
+}
 
 export function search(filter) {
   return {
-    type: SEARCH,
+    type: types.SEARCH,
   	filter: filter
   };
 }
 
 export function loadStarredSuccess(starredData) {
   return {
-    type: LOAD_STARRED_SUCCESS,
+    type: types.LOAD_STARRED_SUCCESS,
     starredData: starredData
   }
 }

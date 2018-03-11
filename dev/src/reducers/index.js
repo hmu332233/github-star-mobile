@@ -1,4 +1,4 @@
-import * as types from '../actions';
+import { types } from '../actions';
 import { combineReducers } from 'redux';
 
 const cardsInitialState = {
